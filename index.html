@@ -1,41 +1,49 @@
-<!-- 
-<html>
-  <head>
-    <title>Info Windows</title>
-  </head>
-  <body>
-    <gmp-map center="41.43367823564242, 75.9832829034765" zoom="10" map-id="DEMO_MAP_ID">
-      <gmp-advanced-marker position="41.445975473076246, 76.28011080604793" title="Верхне-Нарынский" gmp-clickable></gmp-advanced-marker>
-    </gmp-map>
-
-    <script src="./script.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiUWumGJwyRG-QBNuGOnci1v2A7o8qJZM&loading=async&callback=initMap&libraries=marker&v=beta&solution_channel=GMP_CCS_infowindows_v2"
-      defer
-    ></script>
-  </body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Карта с маркерами</title>
-    <style>
-      #map {
-        height: 500px;
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script src="./script.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiUWumGJwyRG-QBNuGOnci1v2A7o8qJZM&callback=initMap"
-      defer
-    ></script>
-   
-   
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map with Categories</title>
+  <style>
+    #map {
+      height: 900px;
+      width: 100%;
+    }
+
+    .filter-container {
+      margin: 10px 0;
+    }
+
+    .filter-container label {
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .filter-container select {
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Map with Categories</h1>
+  
+  <div class="filter-container">
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="power">Electro Stations</option>
+      <option value="minerals">Minerals</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <div id="map"></div>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiUWumGJwyRG-QBNuGOnci1v2A7o8qJZM&callback=initMap"
+    defer
+  ></script>
+ <script src="./script.js"></script>
+
+</body>
 </html>
